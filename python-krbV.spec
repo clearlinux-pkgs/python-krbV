@@ -4,7 +4,7 @@
 #
 Name     : python-krbV
 Version  : 1.0.90
-Release  : 3
+Release  : 4
 URL      : http://pypi.debian.net/python-krbV/python-krbV-1.0.90.tar.bz2
 Source0  : http://pypi.debian.net/python-krbV/python-krbV-1.0.90.tar.bz2
 Summary  : Python extension module for Kerberos 5
@@ -50,7 +50,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1509386344
+export SOURCE_DATE_EPOCH=1510778551
 python2 setup.py build -b py2
 
 %install
