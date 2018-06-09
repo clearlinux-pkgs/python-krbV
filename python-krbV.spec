@@ -4,13 +4,12 @@
 #
 Name     : python-krbV
 Version  : 1.0.90
-Release  : 9
+Release  : 10
 URL      : http://pypi.debian.net/python-krbV/python-krbV-1.0.90.tar.bz2
 Source0  : http://pypi.debian.net/python-krbV/python-krbV-1.0.90.tar.bz2
 Summary  : Python extension module for Kerberos 5
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-2.1+
-Requires: python-krbV-legacypython
 Requires: python-krbV-python
 BuildRequires : e2fsprogs-dev
 BuildRequires : krb5-dev
@@ -19,6 +18,7 @@ BuildRequires : pip
 BuildRequires : python-dev
 BuildRequires : python3-dev
 BuildRequires : setuptools
+BuildRequires : setuptools-legacypython
 
 %description
 python-krbV allows python programs to use Kerberos 5 authentication and security.
@@ -49,7 +49,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1517698110
+export SOURCE_DATE_EPOCH=1528574225
 python2 setup.py build -b py2
 
 %install
