@@ -15,7 +15,7 @@ BuildRequires : e2fsprogs-dev
 BuildRequires : krb5-dev
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 BuildRequires : setuptools-legacypython
