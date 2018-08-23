@@ -4,20 +4,20 @@
 #
 Name     : python-krbV
 Version  : 1.0.90
-Release  : 11
+Release  : 12
 URL      : http://pypi.debian.net/python-krbV/python-krbV-1.0.90.tar.bz2
 Source0  : http://pypi.debian.net/python-krbV/python-krbV-1.0.90.tar.bz2
 Summary  : Python extension module for Kerberos 5
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-2.1+
+Requires: python-krbV-license
 Requires: python-krbV-python
+BuildRequires : buildreq-distutils
+BuildRequires : buildreq-distutils3
 BuildRequires : e2fsprogs-dev
 BuildRequires : krb5-dev
-BuildRequires : pbr
-BuildRequires : pip
-
+BuildRequires : python-dev
 BuildRequires : python3-dev
-BuildRequires : setuptools
 BuildRequires : setuptools-legacypython
 
 %description
@@ -30,6 +30,14 @@ Requires: python-core
 
 %description legacypython
 legacypython components for the python-krbV package.
+
+
+%package license
+Summary: license components for the python-krbV package.
+Group: Default
+
+%description license
+license components for the python-krbV package.
 
 
 %package python
@@ -49,11 +57,13 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1528574225
+export SOURCE_DATE_EPOCH=1535067915
 python2 setup.py build -b py2
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/python-krbV
+cp COPYING %{buildroot}/usr/share/doc/python-krbV/COPYING
 python2 -tt setup.py build -b py2 install --root=%{buildroot}
 
 %files
@@ -64,6 +74,10 @@ python2 -tt setup.py build -b py2 install --root=%{buildroot}
 %files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/python-krbV/COPYING
 
 %files python
 %defattr(-,root,root,-)
