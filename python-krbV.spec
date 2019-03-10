@@ -4,7 +4,7 @@
 #
 Name     : python-krbV
 Version  : 1.0.90
-Release  : 13
+Release  : 14
 URL      : http://pypi.debian.net/python-krbV/python-krbV-1.0.90.tar.bz2
 Source0  : http://pypi.debian.net/python-krbV/python-krbV-1.0.90.tar.bz2
 Summary  : Python extension module for Kerberos 5
